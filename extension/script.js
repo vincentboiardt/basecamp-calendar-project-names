@@ -4,11 +4,11 @@
 // ==/UserScript==
 
 var add_jq = function(callback) {
-	var script = document.createElement("script");
-	script.setAttribute("src", "//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js");
+	var script = document.createElement('script');
+	script.setAttribute('src', '//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js');
 	script.addEventListener('load', function() {
-		var script = document.createElement("script");
-		script.textContent = "(" + callback.toString() + ")();";
+		var script = document.createElement('script');
+		script.textContent = '(' + callback.toString() + ')();';
 		document.body.appendChild(script);
 	}, false);
 	document.body.appendChild(script);
@@ -23,7 +23,7 @@ function main(){
 			var container = jQuery('.calendar_container');
 			
 			container = container[0];
-			container.addEventListener("DOMNodeInserted", ProjectNames.addProjectNames);
+			container.addEventListener('DOMNodeInserted', ProjectNames.addProjectNames);
 		},
 		addProjectNames: function() {
 			
